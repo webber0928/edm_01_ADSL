@@ -1,0 +1,295 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href="css/edm_01_ADSL.css" rel="stylesheet" type="text/css" />
+		<script src="jquery-1.12.0.min.js"></script>
+
+		<title>ADSL點品2選1網頁</title>
+	</head>	
+	<body>
+
+		<!-- Google Tag Manager -->
+		<noscript>
+			<iframe src="//www.googletagmanager.com/ns.html?id=GTM-PCZGWN" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+				});
+				var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src =
+				'//www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-PCZGWN');
+
+			if(checkDeviceType() == "iPhone" || checkDeviceType() == "aPhone"){ // 行動裝置導向行動頁面
+				if(QueryString("idx") == null || QueryString("idx") == "")
+					location.href = "/mobile/index.html" + document.location.search;
+			}
+			var cookieValue = getCookie("speedAD");
+			if(cookieValue == undefined || cookieValue == null || cookieValue == ""){
+				//$.get('/submit.do?method=adCheck&m=' + isaac.random(), function(data) {
+						// alert( "Load was performed." );
+				//});
+			}
+		</script>
+		<!-- End Google Tag Manager -->
+
+
+		<div id="main">
+			<img src="images/edm_ADSL.jpg" width="900" height="1212" alt=""/>
+		</div>
+		
+		<div id="frombg">
+			<img src="images/form_bg.png" width="885" height="772" alt=""/>
+		
+			<form id="from1" name="from1" method="post" action="https://123.cht.com.tw/auz/elta/PostFTTBApply.aspx" onsubmit="">
+				<p><span class="tex_11 garnet">*</span>
+					<label>姓名：</label>
+						<input id="name" type="text" name="name" size="12" class="notNull" title="姓名" />
+					<label>
+						<input name="sex" id="sex_1" type="radio" value="先生" checked="checked" />先生</label>&nbsp;
+					<label>
+						<input name="sex" id="sex_0" type="radio" value="小姐" />小姐</label>&nbsp;&nbsp; <span class="tex_11 garnet">*為必填欄位</span>
+				</p>
+
+				<p>
+					<label>&nbsp;連絡時間：</label>
+					<label>
+						<input type="radio" name="time" value="早上" id="time_0" checked="checked" />早上</label>
+					<label>
+						<input type="radio" name="time" value="下午" id="time_1" />下午</label>
+					<label>
+						<input type="radio" name="time" value="晚上" id="time_2" />晚上</label>
+				</p>
+
+				<p>
+					<span class="tex_11 garnet">*</span>
+					<label>Email：</label>
+					<input type="text" id="email" name="email" size="50" class="notNull" title="Email" />
+				</p>
+
+				<p><span class="tex_11 garnet">*</span>
+					<label>市話：</label>
+					<input id="tel1" type="text" value="區碼" size="4" maxlength="3" class="comment num" title="市話區碼" />-
+					<input id="tel2" type="text" value="" size="10" maxlength="8" class="num" title="市話" />
+					<label>手機：</label>
+					<input id="cell" type="text" name="cellphone" value="" size="12" maxlength="10" class="num" title="手機" /><span class="tex_11 garnet">(連絡電話請擇一填寫)</span>
+				</p>
+
+				<p><span class="tex_11 garnet">*</span>
+					<label>申裝速率：</label>
+					<select id="speed" class="notNull" name="speed" title="申裝速率">
+						<option value="" selected="selected">請選擇</option>
+
+						<option value="光世代 500M / 250M-歡樂點方案(3年)">HiNet 光世代 500M / 250M-歡樂點方案(3年)</option>
+
+						<option value="光世代 500M / 250M-好禮Hi(新申請或升速)">HiNet 光世代 500M / 250M-好禮Hi(新申請或升速)</option>
+
+						<option value="光世代 500M / 250M-好禮Hi(1年)">HiNet 光世代 500M / 250M-好禮Hi(1年)</option>
+
+						<option value="光世代 500M / 250M-遊戲點數方案">HiNet 光世代 500M / 250M-遊戲點數方案</option>
+
+						<option value="光世代 500M / 250M-Chromecast基本方案">HiNet 光世代 500M / 250M-Chromecast基本方案</option>
+
+						<option value="光世代 500M / 250M-RealShow電視棒方案">HiNet 光世代 500M / 250M-RealShow電視棒方案</option>
+
+						<option value="光世代 500M / 250M-音樂饗樂(KKBOX)方案">HiNet 光世代 500M / 250M-音樂饗樂(KKBOX)方案</option>
+
+						<option value="光世代 300M / 100M-歡樂點方案(3年)">HiNet 光世代 300M / 100M-歡樂點方案(3年)</option>
+
+						<option value="光世代 300M / 100M-好禮Hi(新申請或升速)">HiNet 光世代 300M / 100M-好禮Hi(新申請或升速)</option>
+
+						<option value="光世代 300M / 100M-好禮Hi(滿約續約)">HiNet 光世代 300M / 100M-好禮Hi(滿約續約)</option>
+
+						<option value="光世代 300M / 100M-好禮Hi(1年)">HiNet 光世代 300M / 100M-好禮Hi(1年)</option>
+
+						<option value="光世代 300M / 100M-遊戲點數方案">HiNet 光世代 300M / 100M-遊戲點數方案</option>
+
+						<option value="光世代 300M / 100M-Chromecast基本方案">HiNet 光世代 300M / 100M-Chromecast基本方案</option>
+
+						<option value="光世代 300M / 100M-RealShow電視棒方案">HiNet 光世代 300M / 100M-RealShow電視棒方案</option>
+
+						<option value="光世代 300M / 100M-音樂饗樂(KKBOX)方案">HiNet 光世代 300M / 100M-音樂饗樂(KKBOX)方案</option>
+
+						<option value="光世代 100M / 100M-歡樂點方案(3年)">HiNet 光世代 100M / 100M-歡樂點方案(3年)</option>
+
+						<option value="光世代 100M / 100M-好禮Hi(新申請或升速)">HiNet 光世代 100M / 100M-好禮Hi(新申請或升速)</option>
+
+						<option value="光世代 100M / 100M-好禮Hi(滿約續約)">HiNet 光世代 100M / 100M-好禮Hi(滿約續約)</option>
+
+						<option value="光世代 100M / 100M-好禮Hi(1年)">HiNet 光世代 100M / 100M-好禮Hi(1年)</option>
+							
+						<option value="光世代 100M / 100M-遊戲點數方案">HiNet 光世代 100M / 100M-遊戲點數方案</option>
+				
+						<option value="光世代 100M / 100M-Chromecast基本方案">HiNet 光世代 100M / 100M-Chromecast基本方案</option>
+									
+						<option value="光世代 100M / 100M-RealShow電視棒方案">HiNet 光世代 100M / 100M-RealShow電視棒方案</option>
+									
+						<option value="光世代 100M / 100M-音樂饗樂(KKBOX)方案">HiNet 光世代 100M / 100M-音樂饗樂(KKBOX)方案</option>
+									
+						<option value="光世代 100M / 40M-歡樂點方案(3年)">HiNet 光世代 100M / 40M-歡樂點方案(3年)</option>
+									
+						<option value="光世代 100M / 40M-好禮Hi(新申請或升速)">HiNet 光世代 100M / 40M-好禮Hi(新申請或升速)</option>
+									
+						<option value="光世代 100M / 40M-好禮Hi(滿約續約)">HiNet 光世代 100M / 40M-好禮Hi(滿約續約)</option>
+									
+						<option value="光世代 100M / 40M-好禮Hi(1年)">HiNet 光世代 100M / 40M-好禮Hi(1年)</option>
+									
+						<option value="光世代 100M / 40M-遊戲點數方案">HiNet 光世代 100M / 40M-遊戲點數方案</option>
+									
+						<option value="光世代 100M / 40M-Chromecast基本方案">HiNet 光世代 100M / 40M-Chromecast基本方案</option>
+									
+						<option value="光世代 100M / 40M-RealShow電視棒方案">HiNet 光世代 100M / 40M-RealShow電視棒方案</option>
+									
+						<option value="光世代 100M / 40M-音樂饗樂(KKBOX)方案">HiNet 光世代 100M / 40M-音樂饗樂(KKBOX)方案</option>
+									
+						<option value="光世代 60M / 20M-歡樂點方案(3年)">HiNet 光世代 60M / 20M-歡樂點方案(3年)</option>
+									
+						<option value="光世代 60M / 20M-好禮Hi(新申請或升速)">HiNet 光世代 60M / 20M-好禮Hi(新申請或升速)</option>
+									
+						<option value="光世代 60M / 20M-好禮Hi(滿約續約)">HiNet 光世代 60M / 20M-好禮Hi(滿約續約)</option>
+									
+						<option value="光世代 60M / 20M-好禮Hi(1年)">HiNet 光世代 60M / 20M-好禮Hi(1年)</option>
+								
+						<option value="光世代 60M / 20M-遊戲點數方案">HiNet 光世代 60M / 20M-遊戲點數方案</option>
+									
+						<option value="光世代 60M / 20M-Chromecast基本方案">HiNet 光世代 60M / 20M-Chromecast基本方案</option>
+									
+						<option value="光世代 60M / 20M-RealShow電視棒方案">HiNet 光世代 60M / 20M-RealShow電視棒方案</option>
+									
+						<option value="光世代 60M / 20M-音樂饗樂(KKBOX)方案">HiNet 光世代 60M / 20M-音樂饗樂(KKBOX)方案</option>
+									
+						<option value="光世代 20M / 5M-歡樂點方案(3年)">HiNet 光世代 20M / 5M-歡樂點方案(3年)</option>
+									
+						<option value="光世代 20M / 5M-好禮Hi(新申請或升速)">HiNet 光世代 20M / 5M-好禮Hi(新申請或升速)</option>
+									
+						<option value="光世代 20M / 5M-好禮Hi(滿約續約)">HiNet 光世代 20M / 5M-好禮Hi(滿約續約)</option>
+									
+						<option value="光世代 20M / 5M-好禮Hi(1年)">HiNet 光世代 20M / 5M-好禮Hi(1年)</option>
+									
+						<option value="光世代 20M / 5M-Chromecast基本方案">HiNet 光世代 20M / 5M-Chromecast基本方案</option>
+									
+						<option value="光世代 20M / 5M-RealShow電視棒方案">HiNet 光世代 20M / 5M-RealShow電視棒方案</option>
+									
+						<option value="光世代 20M / 5M-音樂饗樂(KKBOX)方案">HiNet 光世代 20M / 5M-音樂饗樂(KKBOX)方案</option>
+									
+						<option value="光世代 6M / 2M-歡樂點方案(3年)">HiNet 光世代 6M / 2M-歡樂點方案(3年)</option>
+									
+						<option value="光世代 6M / 2M-好禮Hi(新申請或升速)">HiNet 光世代 6M / 2M-好禮Hi(新申請或升速)</option>
+									
+						<option value="光世代 6M / 2M-好禮Hi(滿約續約)">HiNet 光世代 6M / 2M-好禮Hi(滿約續約)</option>
+									
+						<option value="光世代 6M / 2M-好禮Hi(1年)">HiNet 光世代 6M / 2M-好禮Hi(1年)</option>
+									
+						<option value="光世代 6M / 2M-Chromecast基本方案">HiNet 光世代 6M / 2M-Chromecast基本方案</option>
+									
+						<option value="光世代 6M / 2M-RealShow電視棒方案">HiNet 光世代 6M / 2M-RealShow電視棒方案</option>
+									
+						<option value="光世代 6M / 2M-音樂饗樂(KKBOX)方案">HiNet 光世代 6M / 2M-音樂饗樂(KKBOX)方案</option>
+									
+						<option value="ADSL 8M / 640K-歡樂點或手機自拍器(1年)">HiNet ADSL 8M / 640K-歡樂點或手機自拍器(1年)</option>
+									
+						<option value="ADSL 8M / 640K-輕鬆上網無限包(年繳)">HiNet ADSL 8M / 640K-輕鬆上網無限包(年繳)</option>
+									
+						<option value="ADSL 8M / 640K-年約月繳方案">HiNet ADSL 8M / 640K-年約月繳方案</option>
+									
+						<option value="ADSL 5M / 384K-歡樂點或手機自拍器(1年)">HiNet ADSL 5M / 384K-歡樂點或手機自拍器(1年)</option>
+									
+						<option value="ADSL 5M / 384K-輕鬆上網無限包(年繳)">HiNet ADSL 5M / 384K-輕鬆上網無限包(年繳)</option>
+									
+						<option value="ADSL 5M / 384K-年約月繳方案">HiNet ADSL 5M / 384K-年約月繳方案</option>
+									
+						<option value="ADSL 2M / 64K-歡樂點或手機自拍器(1年)">HiNet ADSL 2M / 64K-歡樂點或手機自拍器(1年)</option>
+									
+						<option value="ADSL 2M / 64K-輕鬆上網無限包(年繳)">HiNet ADSL 2M / 64K-輕鬆上網無限包(年繳)</option>
+									
+						<option value="ADSL 2M / 64K-年約月繳方案">HiNet ADSL 2M / 64K-年約月繳方案</option>
+					</select><span class="tex_11 garnet">&nbsp;(供租對象需為技術可達之範圍為限)</span>
+				</p>
+
+				<p><span class="tex_11 garnet">*</span>
+					<label>寬頻裝址電話：</label>
+					<input id="atel1" type="text" value="區碼" size="4" maxlength="3" class="notNull comment num" title="申裝電話區碼" />-
+					<input id="atel2" type="text" value="" size="10" maxlength="8" class="notNull num" title="申裝電話" />
+				</p>
+
+				<p><span class="tex_11 garnet">若貴客戶欲申請不附掛市話或家中無附掛市話，請親至服務中心辦理。</span>
+				</p>
+
+				<!-- 驗證碼功能暫無
+				<p><span class="tex_11 garnet">*</span>
+					<label>驗證碼：</label>
+					<input id="valid" type="text" size="16" maxlength="8" class="notNull" title="驗證碼" />&nbsp;
+					<img id="validImg" src="/validPic" align="absmiddle" onclick="reloadImg();" style="cursor: pointer;" alt="點圖可以重新產生新的驗證碼" title="點圖可以重新產生新的驗證碼"/>
+				</p>
+				-->
+
+				<p class="btnsent">
+					<a id="_submit" href="#waiting"></a>
+					<img src="images/btn-sent.png" style="cursor: pointer;" onclick="doSubmit();dataLayer.push({'eventCategory':'14-campaign','eventAction':'14-campaign_adm-201601','eventLabel':'14-campaign_specialist-call-conv','event':'click-ga'});dataLayer.push({'event':'click-scupio-buy'});" alt="HiNet光世代光纖寬頻上網專人服務申請確認"/>
+				</p>
+				<input type="hidden" id="eventCode" name="eventCode" value="null"/>
+				<input type="hidden" id="tellphone" name="tellphone"/>
+				<input type="hidden" id="applyphone" name="applyphone"/>
+				<input type="hidden" id="note" name="note" value="null"/>
+			</form>
+		</div>
+
+		<div class="btncontact">
+			<p>
+				<!-- <a href="https://eshop.cht.com.tw/Web/Personal/internet/unfixdetails/?From=&MegaID=65C3FC04-F2F2-476C-97AA-B4F658C77A33&PromoID=4019&ProductID=34&DownlinkSpeedCode=E&UplinkSpeedCode=5&DiscountCode=AD79&IspChargeType=7&CircuitType=">
+				<img src="images/clickbtn.png" style="cursor: pointer;" onclick="dataLayer.push({'eventCategory':'14-campaign','eventAction':'14-campaign_adm-201601','eventLabel':'14-campaign_online-conv','event':'click-ga'});dataLayer.push({'event':'click-scupio-buy'});" alt=""/>
+				</a> -->
+				<input type="image" src="images/clickbtn.png" style="cursor: pointer;" onclick="contactPage();dataLayer.push({'eventCategory':'14-campaign','eventAction':'14-campaign_adm-201601','eventLabel':'14-campaign_online-conv','event':'click-ga'});dataLayer.push({'event':'click-scupio-buy'});" alt="ADSL點品2選1網頁"/>
+			</p>
+		</div>
+
+		<script>
+			function contactPage() {
+				location.href = 'https://eshop.cht.com.tw/Web/Personal/internet/unfixdetails/?From=&MegaID=65C3FC04-F2F2-476C-97AA-B4F658C77A33&PromoID=4019&ProductID=34&DownlinkSpeedCode=E&UplinkSpeedCode=5&DiscountCode=AD79&IspChargeType=7&CircuitType=';
+			}
+
+			function doSubmit() {
+				// concat values
+				var tel1 = document.getElementById('tel1');
+				var tel2 = document.getElementById('tel2');
+				var tellphone = document.getElementById('tellphone');
+
+				var atel1 = document.getElementById('atel1');
+				var atel2 = document.getElementById('atel2');
+				var applyphone = document.getElementById('applyphone');
+				
+				tellphone.value = tel1.value + tel2.value;
+				applyphone.value = atel1.value + atel2.value;
+
+				// check
+				var name = document.getElementById('name');
+				var email = document.getElementById('email');
+				var speed = document.getElementById('speed');
+				var cellphone = document.getElementById('cell');
+
+				var tellFilled = tel1.value != '區碼' && tel2.value != '';
+
+				if (name.value == '' || email.value == '' || 
+					(!tellFilled && cellphone.value == '') || speed.value == ''
+					 || atel1.value == '區碼' || atel2.value == '') {
+					alert('尚有必填欄位未填寫');
+				} else {
+					//alert('申請完成');
+					document.getElementById('from1').submit();
+					// $.post('https://123.cht.com.tw/auz/elta/PostFTTBApply.aspx', $('#form1').serialize())
+					// .done(function(){ alert('已送出資料'); });
+				}
+			}
+		</script>
+	</body>
+</html>

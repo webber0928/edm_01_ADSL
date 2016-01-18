@@ -1,0 +1,57 @@
+﻿body {
+	background-color: #89818E;
+	text-align: center;
+	font-size: 17px;
+	color: #2A81C5;
+}
+/*#bg{
+	background-image: url("images/frome1-bg.png");
+	background-repeat: no-repeat;
+	width:885px;
+　	height:601px;
+	background-color: #000;
+}*/
+#main{
+	margin: 0px auto;
+}
+#frombg{
+	background-color: #FFC03E;
+	width:890px;
+	height:777px;
+	/*background-image: url("images/frome1-bg.png");*/
+	/*background-size:900px 601px;*/
+	background-repeat: no-repeat;
+	margin: -5px auto;
+	padding: 5px;
+}
+#from1{
+	text-align: left;
+	width:790px;
+	height:605px;
+	margin: -550px auto;
+	padding: 30px;
+}
+#from1 input, #from1 select {
+	padding:2px;
+	font-family: "新細明體", Arial;
+    font-size:17px;
+}
+.btncontact{
+	background-color: #F8931F;
+	width:890px;
+	height:110px;
+	margin: -5px auto;
+	padding: 5px;
+}
+.btncontact p{
+	margin: 10px auto;
+}
+.btnsent{
+	text-align: right;
+}
+.tex_11	{
+	font-size:16px;
+}
+.garnet	{
+	color:#c90000;
+}
